@@ -10,7 +10,29 @@
   Deployed Link
 </a>
 
+
+
+<form method="POST" action="/projects/<%= project.id %>"> 
+  
+  <select name="category" id="category">
+   <% categories.forEach(function(category){%> 
+     <option value="<%= category.name %>"><%= category.name %></option>
+   <% }) %>  
+      
+  </select>
+  <button type="submit" class="submit"> Add Category</button>
+</form>
+
+
 <p><%= project.description %></p>
+
+
+<button> <a href="/projects/edit/<%= project.id %> ">Edit</a> </button>
+
+<form method="POST" action="/projects/<%= project.id %>/?_method=DELETE">
+  <button type="submit" class="btn btn-danger"> Delete </button>
+
+</form>
 
 <hr />
 
