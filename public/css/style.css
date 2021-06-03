@@ -1,0 +1,111 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    padding-bottom: 70px;
+}
+/* NAVBAR */
+.logo {
+    color: red;
+    
+}
+.navbar-brand {
+    font-size: 20px;
+}
+nav a {
+    font-size: 20px;
+}
+
+/* HEADER */
+
+header h1 {
+    font-size: 36px;
+    /* text-align: center; */
+    text-align: left;
+    text-transform: uppercase; 
+    color: #ff0000;
+}
+/* BODY */
+.well {
+    margin-left: 0;
+    margin-right: 0;
+}
+.well a {
+    color: #333;
+}
+.well a:focus, a:hover {
+    color: red;
+    text-decoration: none;
+}
+.one-project {
+    font-size: 18px;
+    font-weight: 200;
+} 
+#btn-text {
+    color: white;
+} 
+.btn-dark {
+    background-color: #333;
+}
+.home-link {
+    color: black;
+    font-size: 15px;
+}
+.title-capt{
+    text-transform: capitalize;
+}
+.title-color a {
+    color: white;
+}
+.title-color a:hover {
+    color: black;
+}
+
+/* new project page */
+#btn-inpt-text {
+    color: white;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #999;
+    border-color: #999;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+form {
+    padding-top: 5%;
+}
+
+.show-categories{
+    background-color: #c9302c;
+}
+
+
+.btn-delete-categ:hover {
+    color: black;
+    background-color:white;
+    border-color: white;
+}
+
+label {
+    color: red;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+    .text-left { 
+        text-align: right 
+    }
+    header h1 {
+        text-align: center;
+    }
+    .navbar-text {
+        float: none;
+        
+    }
+}
