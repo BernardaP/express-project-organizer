@@ -28,7 +28,7 @@ header h1 {
     margin-left: 0;
     margin-right: 0;
 }
-.well a {
+.well a, .back-arrow a {
     color: #333;
 }
 .well a:focus, a:hover {
@@ -94,13 +94,13 @@ label {
     color: red;
 }
 
-.options-bar {
+/* .options-bar {
     margin: 2% 0%;
 }
 
 .pull-right {
     float: right !important;
-  }
+  } */
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
