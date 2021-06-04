@@ -94,13 +94,11 @@ label {
     color: red;
 }
 
-/* .options-bar {
-    margin: 2% 0%;
+.category-name {
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.pull-right {
-    float: right !important;
-  } */
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {

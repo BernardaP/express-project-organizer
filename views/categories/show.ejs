@@ -1,13 +1,23 @@
-<h1><%= category.name %></h1>
+<header>
+  <h2 class="title-capt"><span class="logo">[ </span>MY<span class="logo"> ]</span> Categories </h2>
+  <h3>Projects in the <span class="category-name"><%= category.name %> Category </span> </h3>
+</header>
+<hr>
+<main>
+  
+  <% if (category.projects.length < 1) { %>
+    <h4>Better get organized, I've no projects here!</h4>
+  <% } %> 
 
-<% category.projects.forEach(function(project) { %>
-  <div class="well">
-    <h2>
-      <a href="/projects/<%= project.id %>"><%= project.name %></a>
-    </h2>
-  </div>
-<% }); %>
-
-<hr />
-
-<a href="/">&larr; Back Home</a>
+  <% category.projects.forEach(function(project) { %>
+    <div class="well">
+      <h2 class="title-capt">
+        <a href="/projects/<%= project.id %>"><%= project.name %></a>
+      </h2>
+    </div>
+  <% }); %>
+    
+  <hr/>
+  <a class="home-link" href="/categories/">&larr; Back to Categories</a>
+     
+</main>
