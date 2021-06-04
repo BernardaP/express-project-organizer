@@ -38,6 +38,7 @@ header h1 {
 .one-project {
     font-size: 18px;
     font-weight: 200;
+    margin-top: 5%;
 } 
 #btn-text {
     color: white;
@@ -93,8 +94,13 @@ label {
     color: red;
 }
 
+.options-bar {
+    margin: 2% 0%;
+}
 
-
+.pull-right {
+    float: right !important;
+  }
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
