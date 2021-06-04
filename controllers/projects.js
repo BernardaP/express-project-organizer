@@ -19,12 +19,11 @@ router.post('/', (req, res) => {
     db.category.findOrCreate({
       where:{
         name: req.body.category,
-      }
-      
+      } 
     }).then(function([category,created]){
       project.addCategory(category).then(function(relationInfo) {
-        console.log(`Project ${project.name} added to ${category.name}`)
-        console.log(relationInfo)
+        // console.log(`Project ${project.name} added to ${category.name}`)
+        // console.log(relationInfo)
       })
     })
     res.redirect('/')
@@ -48,7 +47,7 @@ router.get('/:id', (req, res) => {
     if (!project) throw Error()
     db.category.findAll()
     .then((categories)=> {
-      console.log(project)
+      // console.log(project)
     res.render('projects/show', { project: project, categories: categories })
     })
     
@@ -71,6 +70,8 @@ router.get('/:id', (req, res) => {
 //   })
 // })
 
+//GET /projects/edit/:id display form to edit
+//Async await
 router.get('/edit/:id', async (req, res)=> {
   try {
     const foundProject = await db.project.findOne({
@@ -90,7 +91,7 @@ router.get('/edit/:id', async (req, res)=> {
 })
 
 
-
+//POST /project/id adds category to an individual project
 router.post('/:id', (req, res)=>{
 
   db.project.findOrCreate({
@@ -99,11 +100,9 @@ router.post('/:id', (req, res)=>{
   .then(([project, created]) => {
     console.log(">>>>>><<<<<",req.body)
     db.category.findOrCreate({
-      
       where:{
         name: req.body.category,
       }
-      
     }).then(function([category,created]){
       project.addCategory(category).then(function(relationInfo) {
         // console.log(`Project ${project.name} added to ${category.name}`)
@@ -118,6 +117,7 @@ router.post('/:id', (req, res)=>{
   })
 })
 
+//PUT project/id Edit individual project
 router.put('/:id', (req, res)=> {
   db.project.findOne({
     where: {id: req.params.id}
