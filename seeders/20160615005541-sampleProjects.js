@@ -13,10 +13,10 @@ module.exports = {
       }], {});
     */
     return queryInterface.bulkInsert('projects', [{
-      name: 'Seattle Showdown',
-      githubLink: 'https://github.com/michaelscotthurley/seattle-showdown',
-      deployLink: 'https://seattleshowdown.herokuapp.com/',
-      description: 'A social concert web application for the Seattle area. This app allows users to register for an account and use the Bandsintown API to search for concerts in the Seattle area by artist',
+      name: 'Libros',
+      githubLink: 'https://github.com/BernardaP/libros_app',
+      deployLink: 'https://libros-app.herokuapp.com/',
+      description: 'Libros is a full-stack application that a book lover can use to catalogue their books by creating a virtual library. Libros allows the user to create a library/bookshelf by adding books using a search bar.',
       createdAt: new Date(),
       updatedAt: new Date()
     },
