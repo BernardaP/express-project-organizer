@@ -1,14 +1,26 @@
-<h2>My Categories</h2>
+<header>
+  <h2>My Categories</h2>
+</header>
 <hr>
+<main>
 
-<% if (categories.length < 1) { %>
-  <h4>Better get organizing, I've no categories!</h4>
-<% } %>
+  <% if (categories.length < 1) { %>
+    <h4>Better get organizing, I've no categories!</h4>
+  <% } %>
+    
+  <% categories.forEach(function(category) { %>
+    <div class="well show-categories row">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <h2 class="title-capt title-color">
+          <a href="/categories/<%= category.id %>"><%= category.name %></a>
+        </h2>
+      </div>
+      <div class="text-left col-xs-12 col-sm-6 col-md-4">
+        <form method="POST" action="/categories/<%= category.id %>?_method=DELETE"> 
+          <button type="submit" class="btn btn-danger btn-delete-categ">Delete</button>
+        </form>  
+      </div>
+    </div>
+  <% }); %>
 
-<% categories.forEach(function(category) { %>
-  <div class="well">
-    <h2>
-      <a href="/categories/<%= category.id %>"><%= category.name %></a>
-    </h2>
-  </div>
-<% }); %>
+</main>
